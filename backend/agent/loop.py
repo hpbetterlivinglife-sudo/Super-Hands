@@ -9,7 +9,7 @@ from agent.prompt import SYSTEM_PROMPT
 # We use the OpenAI library because OpenRouter follows the same format
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key=os.getenv("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"),
+  api_key=os.getenv("OPENROUTER_API_KEY"),
 )
 
 async def autonomous_worker_loop(user_task: str, websocket, session_id: str, process_tracker: dict):
