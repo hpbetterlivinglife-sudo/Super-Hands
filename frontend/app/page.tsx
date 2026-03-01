@@ -18,8 +18,7 @@ export default function CommandCenter() {
 
   useEffect(() => {
     // Connect to the Python FastAPI backend
-ws.current = new WebSocket('ws://187.77.185.252:8000/ws/session-1');
-    
+ws.current = new WebSocket('ws://187.77.185.252:8000/ws/session-1');    
     ws.current.onmessage = (event) => {
       const msg = JSON.parse(event.data);
       
